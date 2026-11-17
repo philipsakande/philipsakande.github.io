@@ -39,12 +39,14 @@ section{max-width:1000px;margin:0 auto;padding:42px 22px}h2{font-size:32px;borde
 • <b>IT Support / System Engineer</b> — Troubleshooting, user support, system setup, backups, documentation.</p>
 <p><b>Career Goal:</b> DevOps / Cloud &amp; Critical Infrastructure Protection Engineer • Graduate study: Smart Grids, Institute of Science Tokyo / Kyushu University via ADB-JSP</p>
 
-<h3>Project 1 — Small Business LAN (Packet Tracer) — Network Built on Stewardship</h3>
+<h3>Project 1 — Multi-Site Secure Network (Packet Tracer) — Abuja, Lagos, Kano — Network Built on Stewardship</h3>
 <p><b>Context / Task:</b> Design a secure small-business LAN for a company with Sales and IT teams that must be separated but share internet. Devices: Router 4331, Switch 2960.</p>
 <p><b>Challenge:</b> Sales traffic was leaking into IT, DHCP was misconfigured, and one wrong subnet mask broke connectivity. I had to learn Router-on-a-Stick from scratch.</p>
 <p><b>How I Overcame:</b> Created VLAN 10 Sales 192.168.10.0/24 and VLAN 20 IT 192.168.20.0/24, configured trunk + sub-interfaces, DHCP pools per VLAN, ACL to restrict cross-VLAN access, NAT for internet. Tested with ping and show ip route, fixed ACL order after first test failed.</p>
 <p><b>Result:</b> Sales and IT isolated, both online, ACL enforced, documented config.</p>
 <p><b>Lesson + Spiritual Growth:</b> Like the Lagos flat loose joint, a loose network rule can burn trust. Stewardship means segmenting, testing, and documenting — not just making it “work.” D&amp;C 64:33 — small faithful configs build a great network.</p>
+<p><b>4.2 / 4.3 Refinement — Multi-Site Secure Network (Abuja – Lagos – Kano):</b> I expanded this project to three sites: R1-Abuja, R2-Lagos, R3-Kano, with SW1–SW4, DNS, Web, and RADIUS-Server. I added WPA2-Enterprise wireless on WRT300N. Laptop-1 connects with SSID <b>Default</b>, username <b>students</b>, authenticated by RADIUS-Server. Verified with <b>ping 192.168.0.1</b> — Reply. I added least-privilege ACLs, logging on ACL denies, a 1-page Acceptable Use / consent note, testing + rollback config, and documentation. Rogue-PC is left unconnected to prove port-security blocks unauthorized devices. From 4.1 I learned from Google location tracking, Apple AirTag, and Uber's breach cover-up that a working tool can still harm people who never consented — so I now design for the person who is not in the room.</p>
+<p><a class="btn btn-gold" href="Multi-Site-Secure-Network.pkt" download>📥 Download Packet Tracer Project (.pkt) ↓</a> &nbsp; <a class="btn btn-light" href="https://github.com/philipsakande/philipsakande.github.io/blob/main/Multi-Site-Secure-Network.pkt" target="_blank">View Project on GitHub ↗</a></p>
 
 <h3>Project 2 — Ubuntu Server Hardening — Apache2 403 Fix</h3>
 <p><b>Context / Task:</b> Deploy and harden an Ubuntu server running Apache2 for a portfolio / ministry site. Users got 403 Forbidden.</p>
